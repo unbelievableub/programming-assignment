@@ -1,7 +1,3 @@
-## This is the Programming assignment for the John Hopkins course "practical machine learning"
-## see the corresponding file for details and explanations
-## Developed by Ursula Boehm, November 2014
-
 ## 0. Initialize and get started....
 
 set.seed(123)
@@ -111,7 +107,7 @@ table(predTest, testing$classe)
 conMatGBM<- confusionMatrix(testing$classe, predict(modelFitGBM, testing))
 print(conMatGBM)
 
-## RF predicts the better/more accurate results (98.2%!) - use RF
+## RF predicts the better/more accurate results (98+%!) - use RF
 
 ## 7. run on test data (4 real!) and product output files
 
@@ -126,10 +122,4 @@ pml_write_files = function(x){
 	}
 }
 pml_write_files(resultsRF)
-
-##> resultsRF
-## [1] "B" "A" "C" "A" "A" "E" "D" "B" "A" "A" "B" "C" "B" "A" "E" "E" "A" "B" "B"
-##[20] "B"
-
-
 
